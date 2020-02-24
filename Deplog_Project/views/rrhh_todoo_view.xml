@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <record id="view_hr_applicant_form_inherit" model="ir.ui.view">
+      <field name="name">project.task.form.inherit</field>
+      <field name="model">project.task</field>
+      <field name="inherit_id" ref="project.view_task_form2" />
+      <field name="arch" type="xml">
+         <xpath expr="//field[(@name='user_id')]" position="after">
+            <label for="field_1" string="Dirección de Residencia" />
+            <div class="o_row oe_edit_only">
+               <field name="name1" options="{'no_open': True, 'no_create': True}" />
+            </div>
+         </xpath>
+         <xpath expr="//page[(@name='extra_info')]" position="after">
+            <page string="Embarque">
+              <group>
+                <group string="INFORMACIÓN DEL CLIENTE">
+                    <field name="compania"/>
+                    <field name="con1"/>
+                    <field name="correo1"/>                  
+                    
+                </group>
+
+                <group string="DETALLES DE LA CARGA">
+                  <field name="incot" string="Inconterms"/>
+
+                  
+                </group>
+
+                <group string="SERVICIOS DE LA CARGA">                 
+
+                      <field name="age" string="Agenciamiento"/>
+                      <field name="city" attrs="{'invisible': [('age', 'not in', ['Si'])]}" groups="hr.group_hr_user"/>                    
+
+                      <field name="seg" string="Seguro" />
+                      <field name="valor" attrs="{'invisible': [('seg', 'not in', ['Si'])]}" groups="hr.group_hr_user"/>
+                      
+
+                </group>
+
+                <group string="FLETE"></group>
+                <group string="CORTE DOCUMENTAL: CONSIGNEE"></group>
+                <group string="CORTE DOCUMENTAL: SHIPPER"></group>
+              </group>
+        
+
+            </page>
+            <page string="Orden de Servicio"></page>
+            <page string="Orden de Compra"></page>
+            <page string="Detalles de la reserva"></page>
+         </xpath>
+      </field>
+   </record>
+</odoo>
+
+
+
