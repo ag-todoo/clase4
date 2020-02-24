@@ -1,9 +1,9 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-    <record model="ir.ui.view" id="andres_modulo.list">
+    <record model="ir.ui.view" id="andres_modulo_list">
       <field name="name">andres_modulo list</field>
-      <field name="model">andres_modulo.andres_modulo</field>
+      <field name="model">andres_modulo</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
@@ -14,16 +14,16 @@
     </record>
 
     <!-- actions opening views on models -->
-    <record model="ir.actions.act_window" id="andres_modulo.action_window">
+    <record model="ir.actions.act_window" id="andres_modulo_action_window">
       <field name="name">LFPV-1993</field>
-      <field name="res_model">andres_modulo.andres_modulo</field>
+      <field name="res_model">andres_modulo</field>
       <field name="view_mode">tree,form</field>
     </record>
 
     <!-- server action to the one above -->
 
-    <record model="ir.actions.server" id="andres_modulo.action_server">
-      <field name="name">andres_modulo server</field>
+    <record model="ir.actions.server" id="andres_modulo_action_server">
+      <field name="name">andres_modulo</field>
       <field name="model_id" ref="model_andres_modulo_andres_modulo"/>
       <field name="state">code</field>
       <field name="code">
@@ -37,7 +37,7 @@
     
 
     <!-- Top menu item -->
-    <menuitem name="andres_modulo" id="andres_modulo.menu_root"/>
+    <menuitem name="andres_modulo" id="andres_modulo_menu_root"/>
     <!-- menu categories -->
     <menuitem name="Menu 1" id="andres_modulo.menu_1" parent="andres_modulo.menu_root"/>
     <menuitem name="Menu 2" id="andres_modulo.menu_2" parent="andres_modulo.menu_root"/>
