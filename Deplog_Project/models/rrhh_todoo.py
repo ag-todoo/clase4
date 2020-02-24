@@ -15,6 +15,7 @@ class Todoo(models.Model):
     name2 = fields.Char(string="Segundo Apellido")
     name3 = fields.Char(string="Primer Nombre")
     name4 = fields.Char(string="Segundo Nombre")
+    name5 = fields.Char(string="gafas")
     
     compania=fields.Many2one('res.partner')
     con1=fields.Char(string="Contacto 1")

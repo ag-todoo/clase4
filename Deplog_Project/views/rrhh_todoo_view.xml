@@ -18,7 +18,7 @@
                     <field name="compania"/>
                     <field name="con1"/>
                     <field name="correo1"/>                  
-                    
+                    <field name="gafas" string="usa gafas"/>
                 </group>
 
                 <group string="DETALLES DE LA CARGA">
